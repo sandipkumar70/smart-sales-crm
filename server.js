@@ -14,6 +14,7 @@ const dealRoutes = require("./routes/dealRoutes");
 const userRoutes = require("./routes/userRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 const aiRoutes = require("./routes/aiRoutes");
+const reportRoutes = require("./routes/reportRoutes");
 
 // Connect to MongoDB
 connectDB();
@@ -40,6 +41,7 @@ app.use("/api/deals", dealRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/ai", aiRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/reports", reportRoutes);
 
 
 const PORT = process.env.PORT || 5000;
